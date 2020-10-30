@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-09-27 01:36:16
- * @LastEditTime: 2020-10-30 01:20:44
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-10-30 10:50:42
+ * @LastEditors: shelia
  * @Description: In User Settings Edit
  * @FilePath: /weapp-api/app.js
  */
@@ -17,7 +17,7 @@ const sayHelloRoute = require('./api/routes/sayHello')
 app.use('/toonifyImage', toonifyRoute)
 app.use('/sayHello', sayHelloRoute)
 
-app.use('/index', (req, res, next) => {
+app.use('/', (req, res, next) => {
     res.status(200).json({
         message: 'It works!'
     });
